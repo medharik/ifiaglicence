@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>les formulaires en html</title>
+</head>
+<body>
+    <!-- form>(input+br)*6 -->
+ <form action="">
+     <input type="text"  required name="nom" id="nom" placeholder="Nom:">
+     <br>
+     <input type="email"    name="email" id="email" placeholder="email">
+     <br>
+     <input type="password" name="passe" id="passe"  placeholder="mote de passe">
+     <br>
+     <input type="tel" name="tel" id="tel"  placeholder="Téléphone">
+     <br>
+     <input type="number" step="2" min="10" max="30" name="harold" id="charle" placeholder="age" >
+     <br>
+     <input type="date" name="daten"  id="daten" placeholder="date de naissance">
+     <br>
+     <input type="search" name="re" id="re" placeholder="recherche"> <br>
+     <input type="color" name="col" id="col"><br>
+     <input type="datetime-local" name="date1" id="date1" ><br>
+     <input type="time" name="heure" id="heure" placeholder="heure"> <br>
+     <input type="range" value="5" step="1" min="0" max="10" name="apreciation" id="apreciation"><br>
+     <input type="month" name="mois" id="mois" placeholder="mois"><br>
+     <input type="file" name="cv" id="cv"><br>
+     <input type="url" name="lien" id="lien" placeholder="votre site web">
+     <button > Valider</button>
+ </form>
+
+
+ <hr>
+
+ <form action="">
+     <table align="center" width="400">
+         <tr>
+             <td>sexe</td>
+             <td>
+                 
+                <input type="radio" name="hf" id="ho" value="homme">
+                <label for="ho">Homme</label> 
+               <label > 
+                   <input type="radio" name="hf" id="f" value="femme">
+                   Femme
+                </label>
+                
+
+            </td>
+         </tr>
+         <tr>
+             <td>Votre choix</td>
+             <td><label >Choix 1<input type="checkbox" value="choix1" name="c[]"></label>
+                <label>Choix 2<input type="checkbox" value="choix2" name="c[]"></label></td>
+         </tr>
+         <tr>
+             <td>Ville </td>
+             <td>
+                 <select name="ville" id="ville">
+                     <option value="casa">casablanca</option>
+                                 
+                     <option selected="selected" >...</option>
+  <option value="2">
+                         rabat
+                     </option>
+                     <option value="3">el jadida</option>
+                 </select>
+             </td>
+         </tr>
+         <tr>
+             <td>Pays</td>
+             <td><input type="text" list="listpays" name="p" id="p"></td>
+         </tr>
+         <datalist id="x">
+             <option value="Maroc">Maroc</option>
+             <option value="Congo">Congo</option>
+             <option value="Iles comors">Iles comors</option>
+         </datalist>
+     </table>
+ </form>
+
+</body>
+</html>
