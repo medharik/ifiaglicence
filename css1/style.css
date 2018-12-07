@@ -107,3 +107,21 @@ li > a[data-nom=test]{
     font-size: 3em;
     
 }
+img + table{
+    margin: 0 auto;
+width: 500px;
+}
+img + table tbody tr:nth-child(3n){
+    background: red;
+    color: white;
+}
+img + table tbody tr:nth-child(3n+1){
+    background: green;
+    color: white;
+}
+
+img + table tbody tr:nth-child(3n+2){
+    background: blue;
+    color: white;
+}
+
