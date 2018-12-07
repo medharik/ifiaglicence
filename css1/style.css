@@ -1,0 +1,109 @@
+body{
+    background: rgb(241, 235, 235);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2{
+    color: #00bfff;
+     text-align: center; /*pour les inlines et inline block */
+}
+
+h1{
+    font-size: 1.6em;
+}
+p{
+    text-indent: 10px;
+    text-align: justify;
+    border: 10px solid deeppink;
+    padding: 15px;
+    width: 700px;
+    margin: 0 auto;/*pour center un block*/
+
+    border-style: double solid  ;
+    border-radius: 20px  0 ;
+}
+p::first-letter{
+    font-size: 7em;
+    float: left;
+    margin-right: 15px;
+    font-weight: bold;
+    font-family: 'Unlock', cursive;
+    color: deeppink;
+}
+/* pour tous les p qui suivent un h2 */
+h2 ~ p{    
+     border-color:black;   
+}
+
+p img { /* toutes les img child de p */
+    float: left;
+    border-radius: 50%;
+}
+ul.parent  li{
+    border: 2px solid red;
+}
+/* id : pour definir un element de style unique*/
+#uniq1{ 
+    background: white;
+}
+/* . pour definir un style a appliquer q plusieurs element html */
+
+.important{
+color: red;
+font-weight: bold;
+}
+li>a:visited{
+background: green;
+}
+li>a:link{
+    background: red;
+    }
+    
+    li>a:focus{
+        background: pink;
+        }
+        li>a:active{
+            background: black;
+            }
+            
+                 
+           
+    
+li>a:hover{
+    background: white;
+    }
+    
+    
+
+li > a {
+text-decoration: none;
+background: yellow;
+padding: 5px;
+}
+li > a[title=google]{
+    color: red;
+    font-size: 2em;
+}
+li > a[href^=https]{
+    color: red;
+    font-size: 2em;
+}
+li > a[href$=fr]{
+    color: purple;
+    font-size: 2em;
+}
+li > a[href*=oo]{
+    background: white;
+    font-size: 2em;
+}
+
+li > a[data-nom=test]{
+    background: white;
+    font-size: 2em;
+}
+
+ a[data-t=doc]{
+    background:yellow;
+    font-size: 3em;
+    
+}
