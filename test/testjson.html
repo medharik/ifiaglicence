@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="n"><br>
+        <input type="text" id="e"><br>
+        <input type="text" id="p"><br>
+        <select name="p" id="pays">
+            <option value="">...</option>
+        </select>
+        <br>
+        <select name="v" id="v">
+            <option value="">....</option>
+        </select>
+        <button>valider</button>
+    </form>
+
+
+    <script >
+function fpays(){
+req=new XMLHttpRequest();
+req.open('GET','https://restcountries.eu/rest/v2/all?fields=name&lang=fr');
+
+req.responseType="text";
+
+req.send();
+req.onload=function(){
+    r=JSON.parse(req.response)
+  //  alert(r)
+//console.log(JSON.stringify(r))
+pays=document.querySelector('select#pays');
+alert(r.length)
+for(i=0;i<r.length;i++){
+    o=document.createElement('option');
+    o.value=r[i].name;
+    o.innerHTML=r[i].name+" "+i;
+    pays.appendChild(o)
+    
+}
+}
+}
+
+fpays();
+function fville(pays){
+  
+    req=new XMLHttpRequest();
+    req.open('GET','https://restcountries.eu/rest/v2/all?fields=name;capital');
+    
+    req.responseType="text";
+   // alert('https://restcountries.eu/rest/v2/all?fields='+pays+';capital')
+    req.send();
+    req.onload=function(){
+        r=JSON.parse(req.response)
+      //  alert(r)
+    //console.log(JSON.stringify(r))
+    pays=document.querySelector('select#v');
+    alert(r.length)
+    for(i=0;i<r.length;i++){
+        if(r[i].name==pays){
+        o=document.createElement('option');
+        o.value=r[i].capital;
+        o.innerHTML=r[i].capital+" "+i;
+        pays.appendChild(o)
+    }
+        
+    }
+    }
+    }
+//    fville('Morocco');
+document.querySelector('#pays').addEventListener('change',function(){
+   fville('morocco')
+},false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+@import "normalize.css";
+body{
+    /* background: orange; */
+}
+
+header{
+   height: 100px; 
+   padding: 5px; 
+   position: sticky;
+   top: 0;
+   width: 100%;
+   -moz-box-shadow:      -1px 6px 13px #847c7c99;
+   -webkit-box-shadow: -1px 6px 13px #000000;
+   box-shadow:      -1px 6px 13px #847c7c99;
+}
+
+#logo{
+    width: 200px;
+    height: 100px;
+    float: left;
+    background: rgb(167, 113, 14);
+    padding: 10px;
+    box-sizing: border-box;
+}
+#logo > img{
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+   object-position: center;
+
+}
+#menu{
+     width: 470px;
+     height: 100px;
+     float: right;
+}
+#menu a {
+    font-family: sans-serif;
+ text-decoration: none;
+    display: inline-block; 
+height: 100px;
+line-height: 100px;
+box-sizing: border-box;
+padding: 0 15px;
+}
+.clear{
+    clear: both;
+}
+main{
+    min-height: 500px;
+}
+
+footer{
+    height: 100px;
+   background: deepskyblue;
+  
+}
+.l{
+width: 900px;
+}
+.center-zone{
+    margin:0 auto;
+    /* display: block;
+    float: none;  */
+}
+.b{
+    border: 0px solid black;
+}
+
+.half{
+    width: 50%;
+    float: left;
+    display: flex;
+
+    height: 400px;
+   
+    
+    
+}
+.half p{
+    line-height: 20px;
+    width: 90%;
+   
+    margin: auto;
+}
+.img-resp{
+max-width:100%;
+max-height: 100%; 
+padding: 15px;
+border: 1px solid black;
+box-sizing: border-box;
+}
+
+/* les filieres */
+.filiere{
+    width: 33.3333%;
+    float: left;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+}
+.tof{
+    width: 100%;
+    height: 300px;
+}
+.tof img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.separer{
+    height: 20px;
+    clear: both;
+}
+section{
+    margin: 15px 0;
+}
